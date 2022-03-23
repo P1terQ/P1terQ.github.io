@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P1terQ's Webstie</title>
+   <style>
+
+
+        body{
+            margin: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .left{
+            
+            float: left;
+            text-align: center;
+            width: 60%;
+        }
+        .profile-picture{
+            border-radius: 50%;
+        }
+        .right{
+            float: left;
+            font-size: x-large;
+            width: 40%
+        }
+        .footer{
+            padding: 20px;
+            text-align: center;
+        }
+
+
+   </style>
+</head>
+<body>
+    <div class="row">
+        <div class="left">
+            <img class="profile-picture" src="/assets/images/myself.jpg" width="400" />
+            <h1 class="name">P1terQ</h1>
+            <h4 class="subtitle">Robotics&RL</h4>
+        </div>
+
+        <!-- <div class="middle">
+            <p class="bio">
+                I'm currently a Senior in WHU major in Mechanics and a future automation Master in USTC.
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                Thanks for visiting my Webstie.
+            </p>
+        </div> -->
+
+        <div class="right">
+            <ul class="social-links">
+                <li>
+                    <a href="https://github.com/P1terQ">My Github</a>
+                </li>
+                <li>
+                    <a href="http://staff.ustc.edu.cn/~zkan/">My Lab</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>To contact me</p>
+        <p>QQ:2498208982</p>
+    </div>
+</body>
+</html>

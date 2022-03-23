@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+        }
+
+        .head{
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a{
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+        .column{
+            float: left;
+            height: 1000px;
+            padding: 10px;
+            background-color: burlywood;
+        }
+
+        .column.side{
+            width: 25%;
+        }
+
+        .column.middle{
+            width: 50%;
+        }
+
+        .row:after{     /*清楚浮动*/
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer{
+            background-color:red;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="head">
+        <h1>头部</h1>
+        <p>怎么说？</p>
+    </div>
+
+    <div class="topnav">
+        <a href="/assets/images/1.jpeg">link1</a>
+        <a href="/assets/images/2.jpeg">link2</a>
+    </div>
+
+    <div class="row">
+        <div class="column side">
+            <h2>左侧</h2>
+            <p>这里是左left</p>
+        </div>
+
+        <div class="column middle">
+            <h2>中间</h2>
+            <p>这里是中间middle</p>
+        </div>
+
+        <div class="column side">
+            <h2>右侧</h2>
+            <p>这里是右right</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>author:P1terQ</p>
+    </div>
+    
+</body>
+</html>

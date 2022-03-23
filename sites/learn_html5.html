@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn_html5</title>
+
+    <script>
+        document.createElement("我现在心情好些了")
+    </script>
+    <style>
+        HH {
+            display: block;
+            background-color: #ddd;
+            padding: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color: brown;margin-bottom: auto;">A display of video</h1>
+    <video width="1000" height="800" controls>
+        <source src="/assets/videos/VID_20220302_222305.mp4" type="video/mp4">
+    </video>
+    <hr>
+
+    <p>标题和段落照旧</p>
+    <HH>这个元素是我自定义的！</HH>
+    <hr>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #af0d0d;">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <hr>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        找到canvas元素
+        var ctx = c.getContext("2d");
+        内建html5对象
+        ctx.fillstyle = "#000000";
+        颜色
+        ctx.fillRect(0, 0, 150, 75);
+        大小
+        // ctx.moveTo(0, 0);
+        // ctx.lineTo(100,100);
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(90, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+
+    <canvas id="newcanvas" width="1000" height="800" style="border: 20px solid #af0d0d;"></canvas>
+    <script>
+        var c = document.getElementById("newcanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial"
+        ctx.fillText("Hello World", 100, 500)
+    </script>
+    <script>
+        var c = document.getElementById("newcanvas");
+        var ccc = c.getContext("2d")
+        ccc.font = "30px Arial"
+        ccc.strokenText("Hello World", 500, 300)
+    </script>
+    <p style="font-size: xx-large;">好像每个canvas里边只能有一次操作？</p>
+
+    <canvas id="cca" width="1000" height="800" style="border: 10px solid #af0d0d;"></canvas>
+    <script>
+        var c = document.getElementById("cca");
+        var ctx = c.getContext("2d");
+
+        var grad = ctx.createLinearGradient(75,50,5,90,60,100);
+        grad.addColorStop(0,"red")
+        grad.addColorStop(1,"white")
+
+        ctx.fillstyle=grad;
+        ctx.fillRect(10,10,800,600)
+    </script>
+    <p style="font-size: xx-large;">颜色设置都不正常</p>
+
+    <img id="panda" src="/assets/images/1.jpeg" alt="this is a panda" width="300" height="300">
+    <br>
+    <canvas id="asc" width="1000" height="800" style="border: 10px solid #af0d0d;"></canvas>    
+    <script>
+        var c = document.getElementById("asc")
+        var ccc = c.getContext("2d");
+        var img = document.getElementById("panda");
+        ccc.drawImage(img,10,10)
+    </script>
+    <p style="font-size: xx-large;">我的CANVAS没一个功能是正常的</p>
+    <hr>
+
+    <p style="font-size: xx-large;">VScode中SVG为啥没有自动补全</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+    </svg>
+    <hr>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+               
+        <mrow>
+           <msup><mi>a</mi><mn>2</mn></msup>
+           <mo>+</mo>
+                              
+           <msup><mi>b</mi><mn>2</mn></msup>
+           <mo>=</mo>
+                              
+           <msup><mi>c</mi><mn>2</mn></msup>
+        </mrow>
+                      
+     </math>
+
+    <div style="text-align: center;">
+        <button onclick="playPause()">播放/暂停</button>
+        <button onclick="makeBig()">放大</button>
+        <button onclick="makeSmall()">缩小</button>
+        <button onclick="makeNormal()">普通</button>
+        <br>
+        <video id="video1" width="500">
+            <source src="/assets/videos/VID_20220302_222305.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        var myvideo = document.getElementById("video1");
+
+        function playPause()
+        {
+            if(myvideo.paused)
+                myvideo.play();
+            else
+                myvideo.pause();
+        }
+        function makeBig()
+        {
+            myvideo.width = 700;
+        }
+        function makeSmall()
+        {
+            myvideo.width = 300;
+        }
+        function makeNormal()
+        {
+            myvideo.width = 500;
+        }
+    </script>
+
+
+</body>
+
+</html>
